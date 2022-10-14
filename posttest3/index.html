@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <metaname="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wistara Kelana</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+</head>
+<body class="white">
+    <!-- navbar -->
+    <nav class="navbar">
+        <h1 class="logo"><a href="#">KELANA</a></h1>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="https://github.com/zaeger">Github</a></li>
+        </ul>
+        <img src="./image/KSS.png" alt="" class="menu-btn">
+    </nav>
+    
+    <header>
+        
+        <div class="header-content">
+
+            <h2>Wicarita Ampong Dolan ing Nusantara</h2>
+            <div class="line"></div>
+            <h1>KELANA ADVENTURE</h1>
+            <a href="#" class="carita">Cari Tahu Lagi</a>
+        </div>
+    </header>
+
+    <!-- Section -->
+
+    <section class="adventure">
+        <div class="row">
+            <div class="col content-col">
+                <h1>Berkelana Menjelajah Nusantara</h1>
+                <div class="line"></div>
+                <p>Berkelana bersama ampong menjelajah nusantara mencari artefak yang hilang</p>
+                <a href="#" class="carita2">Gameplay</a>
+            </div>
+            <div class="col image-col">
+                <div class="image-gallery">
+                    <img src="./image/ladang.png" alt="">
+                    <img src="./image/starrynite2.png" alt="">
+                    <img src="./image/pantai.png" alt="">
+                    <img src="./image/salam.png" alt="">
+                </div>
+            </div>
+        </div>
+        
+    </section> 
+
+    <section class="aboutme" id="about">
+        <div class="row">
+            <div class="col content">
+                <h1>About Me</h1>
+                <br>
+                <img src="./image/FOTO.jpg" alt="">
+            </div>
+            <div class="col">
+                <div class="tentang">
+                    <h3>Nama</h3><br>
+                    <h3>NIM</h3><br>
+                    <h3>Prodi</h3><br>
+                    <h3>Angkatan</h3><br>
+                    <h3>Hobi</h3><br>
+                </div>   
+            </div>
+            <div class="col">
+                <div class="biodata">
+                    <h4>: Zubair Rahma Anugrah</h4><br>
+                    <h4>: 1915016057</h4><br>
+                    <h4>: Informatika</h4><br>
+                    <h4>: 2019</h4><br>
+                    <h4>: Berhitung sampai sepuluh</h4><br>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+    <section class="themes">
+        <div class="theme-switch">
+            <div class="color" id="rose" ><a href="#" id="rose"></a></div>
+            <div class="color" id="white" ><a href="#" id="white"></a></div>
+            <div class="color" id="black" ><a href="#" id="black"></a></div>
+            <div class="color" id="brown" ><a href="#" id="brown"></a></div>
+            <div class="color" id="green" ><a href="#" id="green"></a></div>
+            <div class="color" id="yellow" ><a href="#" id="yellow"></a></div>
+        </div>
+    </section>
+    <section class="footer">
+        <p>copyright 2022 by Zubair RA</p>
+        <p>KELANA ADVENTURE</p>
+        <script src="./switcher.js"></script>
+
+    </section>
+
+<script>
+    const menuBtn = document.querySelector('.menu-btn')
+    const navlinks =document.querySelector('.nav-links')
+
+    menuBtn.addEventListener('click',()=>{
+        navlinks.classList.toggle('mobile-menu')
+        })
+</script>
+<script>
+    const roseButton= document.getElementById("rose") ;
+    const brownButton= document.getElementById("brown");
+    const greenButton= document.getElementById("green");
+    const yellowButton= document.getElementById("yellow");
+    const whiteButton= document.getElementById("white");
+    const blackButton= document.getElementById("black");
+
+
+    const body=document.body;
+    var className=document.body.className;
+    const theme=localStorage.getItem('theme');
+
+    if (theme == null) {
+        setTheme
+    }
+
+    if(theme){
+        body.classList.replace(className,theme);
+        className=theme;
+    }
+
+    roseButton.onclick=() =>
+    {
+        body.classList.replace(className,'rose');
+        className='rose';
+        localStorage.setItem('theme','rose');
+    }
+
+    brownButton.onclick=() =>
+    {
+        body.classList.replace(className,'brown');
+        className='brown';
+        localStorage.setItem('theme','brown');
+
+    }
+
+    greenButton.onclick=() =>
+    {
+        body.classList.replace(className,'green');
+        className='green';
+        localStorage.setItem('theme','green');
+
+    }
+
+    yellowButton.onclick=() =>
+    {
+        body.classList.replace(className,'yellow');
+        className='yellow';
+        localStorage.setItem('theme','yellow');
+
+    }
+
+    whiteButton.onclick=() =>
+    {
+        body.classList.replace(className,'white');
+        className='white';
+        localStorage.setItem('theme','white');
+    }
+
+    blackButton.onclick=() =>
+    {
+        body.classList.replace(className,'black');
+        className='black';
+        localStorage.setItem('theme','black');
+    }
+
+</script>
+    
+</body>
+
+
+</html>
