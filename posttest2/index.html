@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wistara Kelana</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <h1 class="logo">KELANA</h1>
+        <ul class="nav-links">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="https://github.com/zaeger">Github</a></li>
+        </ul>
+        <img src="./image/KSS.png" alt="" class="menu-btn">
+    </nav>
+
+
+    <header>
+        <div class="header-content">
+            <h2>Wicarita Ampong Dolan ing Nusantara</h2>
+            <div class="line"></div>
+            <h1>KELANA ADVENTURE</h1>
+            <a href="#" class="carita">Cari Tahu Lagi</a>
+        </div>
+    </header>
+
+    <!-- Section -->
+
+    <section class="adventure">
+        <div class="row">
+            <div class="col content-col">
+                <h1>Berkelana Menjelajah Nusantara</h1>
+                <div class="line"></div>
+                <p>Berkelana bersama ampong menjelajah nusantara mencari artefak yang hilang</p>
+                <a href="#" class="carita">Gameplay</a>
+            </div>
+            <div class="col image-col">
+                <div class="image-gallery">
+                    <img src="./image/ladang.png" alt="">
+                    <img src="./image/starrynite2.png" alt="">
+                    <img src="./image/pantai.png" alt="">
+                    <img src="./image/salam.png" alt="">
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="aboutme" id="about">
+        <div class="row">
+            <div class="col content">
+                <h1>About Me</h1>
+                <br>
+                <img src="./image/FOTO.jpg" alt="">
+            </div>
+            <div class="col">
+                <div class="tentang">
+                    <h3>Nama</h3><br>
+                    <h3>NIM</h3><br>
+                    <h3>Prodi</h3><br>
+                    <h3>Angkatan</h3><br>
+                    <h3>Hobi</h3><br>
+                </div>   
+            </div>
+            <div class="col">
+                <div class="biodata">
+                    <h3>: Zubair Rahma Anugrah</h3><br>
+                    <h3>: 1915016057</h3><br>
+                    <h3>: Informatika</h3><br>
+                    <h3>: 2019</h3><br>
+                    <h3>: Berhitung sampai sepuluh</h3><br>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="footer">
+        <p>copyright 2022 by Zubair RA</p>
+        <p>KELANA ADVENTURE</p>
+    </section>
+
+
+
+    <script>
+        const menuBtn = document.querySelector('.menu-btn')
+        const navlinks =document.querySelector('.nav-links')
+        
+        menuBtn.addEventListener('click',()=>{
+            navlinks.classList.toggle('mobile-menu')
+        })
+    </script>
+</body>
+</html>
